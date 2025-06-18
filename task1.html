@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to SkillCraft Technology</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 15px 0;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    nav.scrolled {
+      background-color: #333;
+    }
+    nav ul {
+      list-style: none;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    section:nth-child(odd) {
+      background: linear-gradient(135deg, #5fff7c, #fe7b7b);
+    }
+    section:nth-child(even) {
+      background: linear-gradient(135deg, #11c8cb, #c6fc25);
+    }
+    section h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <div>
+      <h2>Welcome to Skillcraft Technology</h2>
+      <p>Explore our services and learn more about us.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div>
+      <h2>About Us</h2>
+      <p>We are a team of professionals dedicated to providing internships,skills...etc services.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div>
+      <h2>Our Services</h2>
+      <p>We offer a range of services internships to meet your needs.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div>
+      <h2>Contact Us</h2>
+      <p>Get in touch with us for more information.</p>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
